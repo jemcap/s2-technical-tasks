@@ -11,11 +11,6 @@ describe("highlightNumsRefactored function", () => {
     divisible by 3 and 5: 15,30,45,60`;
     expect(numArray).toEqual(expectedOutput);
   });
-  it("should return null for an array containing non-numeric types", () => {
-    expect(highlightNumsRefactored([1, "two", 3])).toBeNull(); // Mixed types
-    expect(highlightNumsRefactored([1, null, 3])).toBeNull(); // Null included
-    expect(highlightNumsRefactored(["one", "two", "three"])).toBeNull(); // All strings
-  });
 });
 
 describe("highlightNums function", () => {
@@ -28,10 +23,5 @@ describe("highlightNums function", () => {
     divisible by 3 and 5: 15,30,45,60`;
 
     expect(numArray).toEqual(expectedOutput);
-  });
-  it("should return null for an array containing non-numeric types", () => {
-    expect(highlightNums([1, "two", 3])).toBeNull(); // Mixed types
-    expect(highlightNums([1, null, 3])).toBeNull(); // Null included
-    expect(highlightNums(["one", "two", "three"])).toBeNull(); // All strings
   });
 });

@@ -40,9 +40,7 @@ function highlightNums(nums) {
     divisible by 3 and 5: ${divisibleByThreeAndFive}`;
 }
 
-console.log(
-  highlightNums([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60])
-);
+highlightNums([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60]);
 
 // REFACTORED CODE
 
