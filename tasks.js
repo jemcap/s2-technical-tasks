@@ -35,12 +35,31 @@ function highlightNums(nums) {
     }
   }
   //   return each array
-  return `divisible by three: ${divisibleByThree}
-  divisible by five: ${divisibleByFive}
-  divisible by three and five: ${divisibleByThreeAndFive}`;
+  return `divisible by 3: ${divisibleByThree}
+  divisible by 5: ${divisibleByFive}
+  divisible by 3 and 5: ${divisibleByThreeAndFive}`;
 }
 
 highlightNums([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60]);
+
+// REFACTORED CODE
+
+function highlightNumsRefactored(nums) {
+  // declare a variable that filters and returns a new array that holds the multiples of three
+  let numsDivisibleByThree = nums.filter((num) => num % 3 === 0);
+  // declare a variable that filters and returns a new array that holds the multiples of five
+  let numsDivisibleByFive = nums.filter((num) => num % 5 === 0);
+  // declare a variable that filters and returns a new array that holds the multiples of three and five
+  let numsDivisibleByThreeAndFive = nums.filter(
+    (num) => num % 3 === 0 && num % 5 === 0
+  );
+  //   return each array
+  return `divisible by 3: ${numsDivisibleByThree}
+    divisible by 5: ${numsDivisibleByFive}
+    divisible by 3 and 5: ${numsDivisibleByThreeAndFive}`;
+}
+
+highlightNumsRefactored([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60]);
 
 // ----------------------------------------------------------------------------------
 // ==================================================================================
