@@ -69,5 +69,7 @@ function groupCars(arr) {
   return groupOfCars;
 }
 
+groupCars(carArray);
+
 module.exports = groupCars;
 // ----------------------------------------------------------------------------------
