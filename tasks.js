@@ -13,6 +13,35 @@
 // if each number in the array is divisible by X, Y, Z, push the numbers to the array
 // return each array
 
+// pass in the array of numbers as an argument
+function highlightNums(nums) {
+  // declare an array to hold each number under each condition
+  let divisibleByThree = [];
+  let divisibleByFive = [];
+  let divisibleByThreeAndFive = [];
+  // loop through the nums array
+  for (let num of nums) {
+    // first condition: if the nums are divisble by both, push each num to the divisibleByThreeAndFive array
+    if (num % 3 === 0 && num % 5 === 0) {
+      divisibleByThreeAndFive.push(num);
+    }
+    // second condition: if the nums are divisble by three, push each num to the divisibleByThree array
+    else if (num % 3 === 0) {
+      divisibleByThree.push(num);
+    }
+    // third condtion: if the nums are divisble by five, push each num to the divisibleByFive array
+    else if (num % 5 === 0) {
+      divisibleByFive.push(num);
+    }
+  }
+  //   return each array
+  return `divisible by three: ${divisibleByThree}
+  divisible by five: ${divisibleByFive}
+  divisible by three and five: ${divisibleByThreeAndFive}`;
+}
+
+highlightNums([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60]);
+
 // ----------------------------------------------------------------------------------
 // ==================================================================================
 
