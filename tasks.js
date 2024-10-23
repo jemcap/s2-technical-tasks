@@ -45,6 +45,9 @@ highlightNums([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60]);
 // REFACTORED CODE
 
 function highlightNumsRefactored(nums) {
+  //   edge case: check if numbers in the array are typeof number
+  let numbers = nums.every((num) => typeof num === "number");
+  if (!numbers) return null;
   // declare a variable that filters and returns a new array that holds the multiples of three
   let numsDivisibleByThree = nums.filter((num) => num % 3 === 0);
   // declare a variable that filters and returns a new array that holds the multiples of five
@@ -59,7 +62,9 @@ function highlightNumsRefactored(nums) {
     divisible by 3 and 5: ${numsDivisibleByThreeAndFive}`;
 }
 
-highlightNumsRefactored([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60]);
+console.log(
+  highlightNumsRefactored([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60])
+);
 
 // ----------------------------------------------------------------------------------
 // ==================================================================================
@@ -89,5 +94,7 @@ highlightNumsRefactored([1, 3, 5, 6, 10, 12, 15, 18, 20, 24, 30, 35, 45, 60]);
 // ]
 // ----------------------------------------------------------------------------------
 // Code:
+
+//
 
 // ----------------------------------------------------------------------------------
